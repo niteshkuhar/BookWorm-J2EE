@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <!-- CSS -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- Variable size, fitting any screen size and resolution -->
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+ </head>
+ <body>
+ <nav class="red lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.jsp"><img src="img/logo.png" width="65"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="search.jsp">Search</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <!--      --------------Divided into 3x2(rxc), only using 1,2 and 2,2-----------       -->
+  <div class="row">
+    <form class="col s12" action="LoginS">
+    <!--  UserID  password  -->
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Enter your username" id="u_id" name="u_id" type="text" length="15" class="validate" autofocus required>
+          <label for="u_id" data-error="Username not found!">UserID</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <input id="password" type="password" name="password" class="validate" length="10" required>
+          <label for="password" data-error="Incorrect password!">Password</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <div class="row center">
+      	<input type="radio" id="user" name="type"  value="user" checked="checked"/>
+      	<label for="user">User</label>
+      	<input type="radio" id="admin"  name="type"  value="admin" />
+      	<label for="admin">Admin</label>
+      </div>
+      <div class="row center">
+        <button class="btn waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Login in to your account" type="submit" name="login_btn">Login</button>
+      </div>
+    </form>
+  </div>
+  <br>
+  <div class="row center">
+    <a href="#" onclick="hideshow('security');">Forgot password</a>
+  </div>
+  <div id="security" style="visibility:hidden">   
+    <div class="row">       <!--  forgot password case secrty questn  -->
+    <form class="col s12" action="ForgetpassS">
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Enter your registered email" id="email" name="email" type="email" class="validate" required>
+          <label for="email">Email ID</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <select id="security_questn" name="security_questn" required>
+            <option value="" disabled selected>Choose your question</option>
+            <option value="1" >What was the name of your primary school?</option>
+            <option value="2" >What was the maiden name of your mother?</option>
+            <option value="3" >What was the name of your first pet?</option>
+            <option value="4" >When you were young, what did you want to become?</option>
+            <option value="5" >What are the last 5 digits of your driver's license number?</option>
+          </select>
+          <label for="security_questn">Security question</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Enter your answer" id="sq_answer" name="sq_answer" type="text" required>
+          <label for="sq_answer">Answer to security question</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <div class="row center">
+        <button id="proceed" class="btn waves-effect waves-light btn-large tooltipped" data-position="bottom" data-delay="50" data-tooltip="Proceed next and enter new password" type="submit" name="login_btn">Proceed</button>
+      </div>
+    </form>
+  </div>
+    
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
+  <script type="text/javascript">
+  function hideshow(id){
+    var e = document.getElementById(id);
+    if(e.style.visibility == "hidden")
+      e.style.visibility = "visible";
+    else
+      e.style.visibility = "hidden";
+  }
+  </script>
+ </body>
+</html>

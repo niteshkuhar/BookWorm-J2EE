@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Registration form</title>
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/javascript">
+      function chkpass(){
+        var x,y;
+        x=document.getElementById("password").value;
+        y=document.getElementById("cpassword").value;
+        if(x==y)
+        {
+            return true;
+        }
+        else
+        {
+            alert("Password mismatch..");
+            document.getElementById("password").value="";
+            document.getElementById("cpassword").value="";
+            document.getElementById("password").value.focus();
+            return false;
+        }
+      }
+  </script>
+ </head>
+ <body>
+ <nav class="red lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.jsp"><img src="img/logo.png" width="65"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="search.jsp">Search</a></li>
+      </ul>
+    </div>
+  </nav>
+ <br>
+ <div class="row">
+    <form class="col s12" action="SignS">
+      <div class="row">            <!--  UserID  Full Name  EmailID-->
+        <div class="input-field col s4">
+          <input placeholder="Enter a username" name="u_id" id="u_id" type="text" length="15" class="validate" autofocus required>
+          <label for="u_id">UserID</label>
+        </div>
+        <div class="input-field col s4">
+          <input placeholder="Enter you full name" name="full_name" id="full_name" type="text" class="validate" autofocus required>
+          <label for="full_name">Full name</label>
+        </div>
+         <div class="input-field col s4">
+         	<input placeholder="Enter a valid email" name="email" id="email" type="email" class="validate" required>
+          <label for="email">Email ID</label>
+         </div>
+      </div>
+      <div class="row">              <!--    Phone     Password     Confirm password   -->
+        <div class="input-field col s4">
+        	<input id="phone" type="text" name="phone" pattern="[7-9][0-9]{9}" placeholder="Enter 10 digit valid mobile number" required>
+          	<label for="full_name">Contact number</label>
+        </div>
+        <div class="input-field col s4">
+        	<input placeholder="Enter a secure password" name="password" id="password" type="password" length="10" class="validate" required>
+          	<label for="password">Password</label>
+        </div>
+        <div class="input-field col s4">
+  			 <input placeholder="Maximum 10 characters long" name="cpassword" id="cpassword" type="password" length="10" class="validate" required>
+             <label for="cpassword">Confirm password</label>     
+        </div>
+      </div>
+      <div class="row">               <!--   DOB    College    Stream     -->
+        <div class="input-field col s4">
+          <input id="dob" name="dob" type="date">
+          <label for="dob"></label>
+        </div>
+        <div class="input-field col s4">
+          <select id="college" name="college">
+            <option value="" disabled selected>Choose your college</option>
+            <option value="50" >Abacus Institute of Engineering & Management</option>
+            <option value="116" >ABS Academy of Science, Technology and Management</option>
+            <option value="38" >Academy of Technology</option>
+            <option value="49" >Adamas Institute of Technology</option>
+            <option value="102" >ADVANCED INSTITUTE OF MODERN MANAGEMENT AND TECHNOLOGY</option>
+            <option value="119" >Apex Management Institute</option>
+            <option value="92" >Army Institute of Management</option>
+            <option value="40" >Aryabhatta Institute of Engg. & Management</option>
+            <option value="9" >Asansol Engineering College</option>
+            <option value="15" >B. P. Poddar Inst. of Management & Technology</option>
+            <option value="7" >Bankura Unnayani Institute of Engineering</option>
+            <option value="122" >Batanagar Institute of Engineering, Management and Science</option>
+            <option value="24" >Bengal College of Engg. & Technology</option>
+            <option value="81" >Bengal College of Engineering & Technology for Women</option>
+            <option value="67" >BENGAL ENGINEERING & SCIENCE UNIVERSITY, SHIBPUR</option>
+            <option value="21" >Bengal Institute of Technology</option>
+            <option value="35" >Bengal Institute of Technology & Management</option>
+            <option value="111" >Bengal School of Technology & Management</option>
+            <option value="101" >Bharatiya Vidya Bhavan Institute of Management Science</option>
+            <option value="18" >Birbhum Institute of Engineering and Technology</option>
+            <option value="98" >Birla School of Management</option>
+            <option value="74" >Brainware Group of Institutions</option>
+            <option value="60" >Budge Budge Institute of Technology</option>
+            <option value="36" >Calcutta Institute of Engineering & Management</option>
+            <option value="42" >Calcutta Institute of Technology</option>
+            <option value="84" >Camellia Insititute of Engineering</option>
+            <option value="78" >Camellia Institute of Engineering and Technology</option>
+            <option value="46" >Camellia Institute of Technology</option>
+            <option value="63" >Camellia Institute of Technology & Management</option>
+            <option value="108" >Camellia School of Business Management</option>
+            <option value="48" >Camellia School of Engineering & Technology</option>
+            <option value="8" >College of Engineering & Management, Kolaghat</option>
+            <option value="85" >Dinabandhu Andrews Institute of Technology and Management</option>
+            <option value="20" >Dr. B. C. Roy Engineering College </option>
+            <option value="73" >Dr. Sudhir Chandra Sur Degree Engineering College</option>
+            <option value="45" >Dream Institute of Technology</option>
+            <option value="123" >DSMS Business School</option>
+            <option value="114" >DSMS Group of Institutions</option>
+            <option value="26" >Dumkal Institute of Engg. & Technology</option>
+            <option value="31" >Durgapur Institute of Advanced Technology & Management</option>
+            <option value="118" >Durgapur Institute of Management And Science</option>
+            <option value="117" >Durgapur Institute of Science, Technology and Management</option>
+            <option value="96" >Eastern Institute For Integrated Learning In Management</option>
+            <option value="89" >Future Business School</option>
+            <option value="30" >Future Institute of Engg. and Management</option>
+            <option value="127" >Future Institute of Technology</option>
+            <option value="82" >Gargi Memorial Institute of Technology Campus</option>
+            <option value="86" >George Group of Colleges</option>
+            <option value="130" >Global Group of Institutions</option>
+            <option value="61" >Global Institute of Management and Technology</option>
+            <option value="112" >Global Institute of Science & Technology</option>
+            <option value="14" >Govt. College of Engineering & Ceramic Technology </option>
+            <option value="13" >Govt. College of Engineering & Leather Technology, Kolkata</option>
+            <option value="12" >Govt. College of Engineering & Textile Technology, Berhampore</option>
+            <option value="11" >Govt. College of Engineering & Textile Technology, Serampore</option>
+            <option value="47" >Greater Kolkata College of Engg. & Management</option>
+            <option value="126" >Guru Nanak Institute of Hotel Management</option>
+            <option value="125" >Guru Nanak Institute of Pharmaceutical Science & Technology</option>
+            <option value="28" >Guru Nanak Institute of Technology</option>
+            <option value="107" >Gurukul Management Studies</option>
+            <option value="5" >Haldia Institute of Technology</option>
+            <option value="55" >Heritage Institute of Technology</option>
+            <option value="41" >Hooghly Engineering & Technology College</option>
+            <option value="106" >IBRAD School of Management and Sustainable</option>
+            <option value="75" >Ideal Institute of Engineering</option>
+            <option value="124" >IHRM Group of Institutions</option>
+            <option value="39" >IMPS College of Engineering & Technology</option>
+            <option value="93" >Institute of Business Management & Research</option>
+            <option value="6" >Institute of Engineering & Management (IEM)</option>
+            <option value="88" >Institute of Management Study</option>
+            <option value="43" >Institute of Science & Technology</option>
+            <option value="109" >International Institute of Management Sciences</option>
+            <option value="68" >JADAVPUR UNIVERSITY</option>
+            <option value="3" >Jalpaiguri Govt. Engineering College</option>
+            <option value="23" >JIS College of Engineering</option>
+            <option value="4" >Kalyani Govt. Engineering College</option>
+            <option value="69" >KALYANI UNIVERSITY SCIENCE INSTRUMENTATION CENTRE</option>
+            <option value="54" >Kanad Institute of Engineering & Management</option>
+            <option value="64" >Kanksa Academy of Technology & Management</option>
+            <option value="104" >Kingston School of Management and Science</option>
+            <option value="121" >Kotibarsha Institute of Technology and Management</option>
+            <option value="34" >Mallabhum Institute of Technology</option>
+            <option value="120" >Management & Science Institute of Durgapur (MSID)</option>
+            <option value="115" >Management Institute of Durgapur</option>
+            <option value="16" >MCKV Institute of Engineering </option>
+            <option value="27" >Meghnad Saha Institute of Technology</option>
+            <option value="77" >Modern Institute of Engineering & Technology</option>
+            <option value="72" >Murshidabad College of Engineering & Technology</option>
+            <option value="25" >Narula Institute of Technology</option>
+            <option value="33" >National Power Training Institute (E.R.)</option>
+            <option value="29" >Neotia Institute of Technology, Management and Science</option>
+            <option value="10" >Netaji Subhash Engineering College </option>
+            <option value="103" >NITTTR</option>
+            <option value="94" >Nopany Institute of Management Studies</option>
+            <option value="97" >Nopany Institute of Professional Studies</option>
+            <option value="113" >NSHM College of Management & Technology</option>
+            <option value="99" >NSHM College of Management and Technology, Kolkata</option>
+            <option value="79" >NSHM Knowledge campus, Durgapur - Group of Institutions</option>
+            <option value="100" >NSHM Knowledge Campus, Kolkata - Group of Institutions</option>
+            <option value="76" >OmDayal School of Engineering & Architecture</option>
+            <option value="32" >Pailan College of Management & Technology</option>
+            <option value="87" >Pailan School of International Studies</option>
+            <option value="17" >RCC Institute of Information Technology</option>
+            <option value="59" >Regent Education & Research Foundation</option>
+            <option value="53" >Sanaka Educational Trust's Group of Institutions</option>
+            <option value="37" >Saroj Mohan Institute of Technology</option>
+            <option value="80" >School of Information Technology - WBUT</option>
+            <option value="44" >Seacom Engineering College</option>
+            <option value="19" >Siliguri Institute of Technology</option>
+            <option value="62" >Sir J C Bose School of Engineering</option>
+            <option value="83" >St. Mary's Technical Campus Kolkata</option>
+            <option value="22" >St. Thomas's College of Engineering & Technology</option>
+            <option value="66" >Surendra Institute Of Engineering & Management</option>
+            <option value="90" >Swami Vivekananda Institute of Management & Comp. Sc.</option>
+            <option value="91" >Swami Vivekananda Institute of Modern Science</option>
+            <option value="51" >Swami Vivekananda Institute of Science & Technology </option>
+            <option value="95" >Syamaprasad Institute of Technology & Management</option>
+            <option value="65" >Techno Global Balurghat</option>
+            <option value="1" >Techno India</option>
+            <option value="52" >Techno India - Banipur (IERCEM Institute of Information Technology)</option>
+            <option value="110" >Techno India - Hooghly</option>
+            <option value="2" >Techno India College of Technology</option>
+            <option value="128" >Techno India University</option>
+            <option value="129" >The Calcutta Anglo Gujarati College</option>
+            <option value="105" >The Heritage Academy</option>
+            <option value="70" >UNIVERSITY INSTITUTE OF TECHNOLOGY, BURDWAN</option>
+            <option value="71" >WEST BENGAL UNIVERSITY OF TECHNOLOGY</option>
+            <option value="0" >Other (Not in the List)</option> 
+            </select>  
+            <label for="college">College name</label>       
+        </div>
+        <div class="input-field col s4">
+        	<select id="stream" name="stream">
+            <option value="" disabled selected>Choose your stream</option>
+            <option value="22" >Aerospace Engineering</option>
+            <option value="30" >Agricultural Engineering</option>
+            <option value="29" >Apparel Production Management</option>
+            <option value="5" >Applied Electronics & Instrumentation Engineering</option>
+            <option value="32" >Architecture</option>
+            <option value="19" >Automobile Engineering</option>
+            <option value="13" >Bio Medical Engineering</option>
+            <option value="7" >Bio-Technology</option>
+            <option value="27" >Ceramic Technology</option>
+            <option value="10" >Chemical Engineering</option>
+            <option value="9" >Civil Engineering</option>
+            <option value="1" >Computer Science & Engineering</option>
+            <option value="28" >Dairy Technology</option>
+            <option value="15" >Electrical & Electronics Engineering</option>
+            <option value="4" >Electrical Engineering</option>
+            <option value="3" >Electronics & Communication Engineering</option>
+            <option value="14" >Electronics & Telecommunication Engineering</option>
+            <option value="8" >Food Technology</option>
+            <option value="2" >Information Technology</option>
+            <option value="11" >Instrumentation & Control Engineering</option>
+            <option value="31" >Jute & Fibre Technology</option>
+            <option value="26" >Jute Technology</option>
+            <option value="25" >Leather Technology</option>
+            <option value="16" >Marine Engineering</option>
+            <option value="6" >Mechanical Engineering</option>
+            <option value="20" >Metallurgical Engineering</option>
+            <option value="21" >Mining Engineering</option>
+            <option value="24" >Power Engineering</option>
+            <option value="23" >Printing Engineering</option>
+            <option value="12" >Production Engineering</option>
+            <option value="18" >Textile Technology</option>
+            <option value="0" >Other (Not Applicable)</option>
+          </select>
+          <label for="stream">Stream name</label>
+        </div>
+      </div>
+      <div class="row">               <!--    Semester    Security questn      Security answr-->
+        <div class="input-field col s4">
+          <select id="semester">
+                <option value="" disabled selected>Choose the semester</option>
+                <option value="1" >1st Semester</option>
+                <option value="2" >2nd Semester</option>
+                <option value="3" >3rd Semester</option>
+                <option value="4" >4th Semester</option>
+                <option value="5" >5th Semester</option>
+                <option value="6" >6th Semester</option>
+                <option value="7" >7th Semester</option>
+                <option value="8" >8th Semester</option>
+                <option value="9" >Pass-Out</option>
+                <option value="10" >Faculty</option>
+          </select>
+          <label for="semester">Semester</label>
+        </div>
+        <div class="input-field col s4">
+        	<select id="security_questn" name="security_questn" required>
+            <option value="" disabled selected>Choose your question</option>
+            <option value="1" >What was the name of your primary school?</option>
+            <option value="2" >What was the maiden name of your mother?</option>
+            <option value="3" >What was the name of your first pet?</option>
+            <option value="4" >When you were young, what did you want to become?</option>
+            <option value="5" >What are the last 5 digits of your driver's license number?</option>
+          </select>
+            <label for="security_questn">Security question</label>
+        </div>
+        <div class="input-field col s4">
+        	<input placeholder="Enter your answer" name="sq_answer" id="sq_answer" type="text" required>
+            <label for="sq_answer">Answer to security question</label>
+        </div>
+      </div>
+      <div class="row">                <!--    check box      -->
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <input id="eula" name="eula" type="checkbox" class="filled-in" required>
+          <label for="eula">I agree to the subjected rules and hereby declare to abide by them.</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <div class="right-align">
+            <button class="btn waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Press to register and await verification from admin" onClick="return chkpass()" type="submit">Submit</button>
+          </div>
+        </div>
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <div class="left-align">
+            <button class="btn waves-effect waves-light tooltipped" data-position="bottom" data-delay="50" data-tooltip="Reset all the fields to start over again" type="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
+ 
+ </body>
+</html>

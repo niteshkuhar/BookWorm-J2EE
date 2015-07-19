@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Change password</title>
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <script type="text/javascript">
+      function chkpass(){
+        var x,y;
+        x=document.getElementById("npassword").value;
+        y=document.getElementById("cnpassword").value;
+        if(x==y)
+        {
+            return true;
+        }
+        else
+        {
+            alert("Password mismatch..");
+            document.getElementById("npassword").value="";
+            document.getElementById("cnpassword").value="";
+            document.getElementById("npassword").value.focus();
+            return false;
+        }
+      }
+  </script>
+  
+ </head>
+ <body>
+ <nav class="red lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.jsp"><img src="img/logo.png" width="65"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="signup.html">Signup</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <!--      --------------Divided into 3x2(rxc), only using 1,2 and 2,2-----------       -->
+  <div class="row">
+    <form class="col s12" action="ChangePassS">
+    <!--  New password        Confirm new password          -->
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <input id="npassword" name="npassword" type="password" class="validate" maxlength="10" required>
+          <label for="npassword">New password</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="input-field col s4">
+          <input id="cnpassword" name="cnpassword" type="password" class="validate" maxlength="10" required>
+          <label for="cnpassword" data-error="Incorrect password!">Confirm password</label>
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+   
+  <div class="row center">
+    <button class="btn waves-effect waves-light btn-large" type="submit" onClick="return chkpass()"  name="chng_passwrd">Change password</button>
+  </div>
+     </form>
+  </div>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
+ </body>
+</html>

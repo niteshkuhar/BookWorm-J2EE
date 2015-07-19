@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Administrator area</title>
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ </head>
+ <body>
+ <nav class="red lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="adminhome.html"><img src="img/logo.png" width="65"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="logout.jsp">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <!--      --------------Divided into 2-3-2-3-2, only using 1,2 and 2,2-----------       -->
+  <div class="row">
+    <form class="col s12">
+    <!--             GREETINGS            -->
+      <div class="row">
+        <div class="input-field col s4">
+        </div>
+        <div class="col s4">
+          <div class="card-panel orange lighten-2">
+            <span class="white-text center-align"><h4>Welcome Administrator</h4></span>
+          </div>  
+        </div>
+        <div class="input-field col s4">
+        </div>
+      </div>
+      <!--             profile         history            -->
+      <div class="row">
+        <div class="input-field col s2">
+        </div>
+        <div class="input-field col s3">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Approve User</span>
+              <p> Here you can approve all pending users request. </p>
+            </div>
+            <div class="card-action center-align">
+              <a href="adminuser.jsp">Click to Approve</a>
+            </div>
+          </div>
+        </div>
+        <div class="input-field col s2">
+        </div>
+        <div class="input-field col s3">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">View Books</span>
+              <p>Here you can find all the books and their ratings.</p>
+            </div>
+            <div class="card-action center-align">
+              <a href="adminbook.jsp">Browse it</a>
+            </div>
+          </div>
+        </div>
+        <div class="input-field col s2">
+        </div>
+      </div>
+    </form>
+  </div>
+    
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/materialize.js"></script>
+ </body>
+</html>
