@@ -1,0 +1,2 @@
+# BookWorm-J2EE
+A 4th year project BookWorm-"Engineering Books Resale Management" on J2EE with oracle 11g database and Tomcat 8.0.24. The  basic functioning of this project is that user can register himself and can log in after Admin approves it. The main task of this project was to allow users to connect among themselves in their college to sell their old books. one uploads a book and other searches for it.
